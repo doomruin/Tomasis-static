@@ -1,5 +1,87 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="input-group">
+    <input placeholder="你想要看什么？" type="text" class="form-control x-kw" ng-model="keyword">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit" ng-click="search(keyword)">
+                <span class="glyphicon glyphicon-search"></span>
+                视频搜索
+            </button>
+        </span>
+
+</div>
+<div class="panel panel-info" style="margin-top: 20px">
+    <div class="panel-heading">
+    <h3>{{video.title}}</h3>
+    </div>
+
+    <div class="panel-body">
+        <div>
+            <div class="col-md-4">
+                <img ng-src="{{video.thumbnail_v2}}" style="width: 130%;height:130% ">
+            </div>
+            <div class="col-md-6 " style="margin-left: 70px;margin-top: 17px">
+                <ul class="list-group">
+
+                    <div class="list-group-item ">
+                        <span  class="col-md-2">类别:</span>
+                        <span  ng-bind="video.category"></span>
+                    </div>
+                    <div class="list-group-item ">
+                        <span  class="col-md-3">上传时间:</span>
+                        <span  ng-bind="video.published"></span>
+                    </div>
+                    <div class="list-group-item ">
+                        <span  class="col-md-3">播放次数:</span>
+                        <span  ng-bind="video.view_count"></span>
+                    </div>
+                    <div class="list-group-item ">
+                        <span  class="col-md-3">标签:</span>
+                        <span  ng-bind="video.tags"></span>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <button type="button" class="btn btn-success"style="height: 207px" ng-click="see(v)">观看视频</button>
+
+            </div>
+        </div>
+
+    </div>
+    <div style="margin: 20px">
+        {{video.description}}
+    </div>
+    <div  style="margin-left: 20px">
+        <span ng-repeat="tag in tags" >
+            <div class="btn-group" style="margin: 2px">
+                <button type="button" class="btn btn-info">{{tag.content}}</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">赞</a></li>
+                    <li><a href="#">踩</a></li>
+
+                </ul>
+            </div>
+        </span>
+    </div>
+    <div class="input-group">
+        <input placeholder="写下你想说的话" type="text" class="form-control x-kw" ng-model="keyword">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit" ng-click="search(keyword)">
+                <span class="glyphicon glyphicon-search"></span>
+                添加评论
+            </button>
+        </span>
+
+    </div>
+
+<div style="margin-top: 20px">
+    <embed src="http://player.youku.com/player.php/sid/XODY0MDk2MTU2/v.swf"
+           allowFullScreen="true" quality="high" width="960" height="600"
+           align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+</div>
+
+
+</div>
+

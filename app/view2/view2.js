@@ -9,6 +9,14 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', ['$scope','$http','$location',function($scope, $http, $location) {
 
-}]);
+        $http.get('json/videoDetail.json').success(function(result) {
+            $scope.video = result;
+        });
+        $http.get('json/tags.json').success(function(tags) {
+            $scope.tags = tags;
+        });
+}])
+
+;

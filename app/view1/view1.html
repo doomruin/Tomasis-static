@@ -1,7 +1,395 @@
 <div class="input-group">
-    <input placeholder="你想要看什么？" type="text" class="form-control x-kw" name="ykurl">
+    <input placeholder="你想要看什么？" type="text" class="form-control x-kw" ng-model="keyword">
         <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span>视频搜索</button>
+            <button class="btn btn-primary" type="submit" ng-click="search(keyword)">
+                <span class="glyphicon glyphicon-search"></span>
+                视频搜索
+            </button>
         </span>
+
 </div>
 
+<div ng-show="showIndexs">
+<section id="dg-container" class="dg-container">
+    <div class="dg-wrapper">
+        <a href="#"><img src="images/1.jpg" alt="image01" height="330" width="482"><div>天将雄师</div></a>
+        <a href="#"><img src="images/2.jpg" alt="image02" height="330" width="482"><div>帕丁顿熊</div></a>
+        <a href="#"><img src="images/3.jpg" alt="image03" height="330" width="482"><div>霍比特人3</div></a>
+        <a href="#"><img src="images/4.jpg" alt="image04" height="330" width="482"><div>50度灰</div></a>
+        <a href="#"><img src="images/5.jpg" alt="image05" height="330" width="482"><div>博物馆奇妙夜</div></a>
+
+    </div>
+    <nav>
+        <span class="dg-prev">&lt;</span>
+        <span class="dg-next">&gt;</span>
+    </nav>
+</section>
+
+<div class="gamebox" style="margin-top: 40px">
+
+<div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z895039c6b27911e4b8e3.html">
+        <img alt="封神英雄" src="http://r3.ykimg.com/050E000054DC4B4967379F1D2104C991" height="280" width="180">
+        <div class="meta lh180">
+            <p>封神英雄</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z88f028fc16f111e4a705.html">
+        <img alt="月供" src="http://r4.ykimg.com/050E000053D753CA67379F150E084248" height="280" width="180">
+        <div class="meta lh180">
+            <p>月供</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zc99290f0843a11e4b432.html">
+        <img alt="玩偶骑士Dream Knight" src="http://r2.ykimg.com/050E000054C703B067379F1D400A3409" height="280" width="180">
+        <div class="meta lh180">
+            <p>玩偶骑士Dream Knight</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z227ffd60a85d11e4b522.html">
+        <img alt="江湖学院 第一季" src="http://r1.ykimg.com/050E000054D840CE67379F64FB0C53EE" height="280" width="180">
+        <div class="meta lh180">
+            <p>江湖学院 第一季</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z8eb0eaceb33111e4b8e3.html">
+        <img alt="石敢当之雄峙天东" src="http://r2.ykimg.com/050E000054DD83B667379F1DBC0F2A87" height="280" width="180">
+        <div class="meta lh180">
+            <p>石敢当之雄峙天东</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_za482d4d4bb1e11e0a046.html">
+        <img alt="大道向远方" src="http://r2.ykimg.com/050E00004FB9F0AC9792737E54000C53" height="280" width="180">
+        <div class="meta lh180">
+            <p>大道向远方</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_za25f5880a6ac11e4a080.html">
+        <img alt="谁都别惹我" src="http://r2.ykimg.com/050E000054C872C567379F1D2E092DE7" height="280" width="180">
+        <div class="meta lh180">
+            <p>谁都别惹我</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zad0e27b6531511e38b3f.html">
+        <img alt="千金女贼" src="http://r1.ykimg.com/050E000054C7073667379F1CB80A42B3" height="280" width="180">
+        <div class="meta lh180">
+            <p>千金女贼</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zffaddf7013d611e48b3f.html">
+        <img alt="12只猴子 第一季" src="http://r4.ykimg.com/050E0000548562CA67379F6CFC0EF385" height="280" width="180">
+        <div class="meta lh180">
+            <p>12只猴子 第一季</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zc6f4d3ca81a211e4a080.html">
+        <img alt="光影" src="http://r4.ykimg.com/050E000054C0BE2E67379F7376018434" height="280" width="180">
+        <div class="meta lh180">
+            <p>光影</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z9aabaf748cf011e4a080.html">
+        <img alt="小野兽花店" src="http://r2.ykimg.com/050E000054B8F0B867379F1CDE0753E6" height="280" width="180">
+        <div class="meta lh180">
+            <p>小野兽花店</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z0650a4b8979c11e4abda.html">
+        <img alt="大刀记" src="http://r4.ykimg.com/050E000054B7719467379F6B8F018B3A" height="280" width="180">
+        <div class="meta lh180">
+            <p>大刀记</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zfbd377c4a99711e3a705.html">
+        <img alt="爱你不放手" src="http://r4.ykimg.com/050E000054B0E73367379F6D58033ED0" height="280" width="180">
+        <div class="meta lh180">
+            <p>爱你不放手</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z56a72182b60111e196ac.html">
+        <img alt="当人心遇上仁心" src="http://r2.ykimg.com/050E000054B0836167379F6DE50B85E2" height="280" width="180">
+        <div class="meta lh180">
+            <p>当人心遇上仁心</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zb95c9d7c59c211e4b432.html">
+        <img alt="美女的诞生" src="http://r4.ykimg.com/050E000054509E0567379F17780703F3" height="280" width="180">
+        <div class="meta lh180">
+            <p>美女的诞生</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zf789007e854111e296ac.html">
+        <img alt="东江英雄刘黑仔" src="http://r2.ykimg.com/050E000053B63ECB67379F14F80DE235" height="280" width="180">
+        <div class="meta lh180">
+            <p>东江英雄刘黑仔</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zdfee6f12875611e4b2ad.html">
+        <img alt="武媚娘传奇 TV版" src="http://r4.ykimg.com/050E0000549792B667379F6D55097F13" height="280" width="180">
+        <div class="meta lh180">
+            <p>武媚娘传奇 TV版</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z125e80d2004f11e1a046.html">
+        <img alt="武媚娘传奇 DVD版" src="http://r4.ykimg.com/050E0000549792DD67379F3CF70400D4" height="280" width="180">
+        <div class="meta lh180">
+            <p>武媚娘传奇 DVD版</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z412e0866a8d111e2b2ac.html">
+        <img alt="陆小凤与花满楼" src="http://r2.ykimg.com/050E0000549BDAFF67379F3CF80223A9" height="280" width="180">
+        <div class="meta lh180">
+            <p>陆小凤与花满楼</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z0af300b2ed2c11e3b8b7.html">
+        <img alt="何以笙箫默" src="http://r2.ykimg.com/050E000054A9E85167379F42B402F64F" height="280" width="180">
+        <div class="meta lh180">
+            <p>何以笙箫默</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z36f4748a8a7411e4abda.html">
+        <img alt="大清盐商" src="http://r1.ykimg.com/050E000054991DF867379F7439089B79" height="280" width="180">
+        <div class="meta lh180">
+            <p>大清盐商</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z55b958d67f7011e4b432.html">
+        <img alt="老农民" src="http://r2.ykimg.com/050E00005497BD7267379F6D860A317A" height="280" width="180">
+        <div class="meta lh180">
+            <p>老农民</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z42b9b1786ade11e4b432.html">
+        <img alt="mangirl女汉子" src="http://r4.ykimg.com/050E000054643CCD67379F657D0AB89E" height="280" width="180">
+        <div class="meta lh180">
+            <p>mangirl女汉子</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z46d6562c90b711e4a080.html">
+        <img alt="急诊室故事" src="http://r3.ykimg.com/050E000054A8D30F67379F3F5F0485AF" height="280" width="180">
+        <div class="meta lh180">
+            <p>急诊室故事</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zd81272e859c011e4b432.html">
+        <img alt="锋刃" src="http://r2.ykimg.com/050E0000549CF51167379F6C42008B13" height="280" width="180">
+        <div class="meta lh180">
+            <p>锋刃</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z5c2223b82e5a11e4abda.html">
+        <img alt="八卦神探" src="http://r1.ykimg.com/050E0000548AABF067379F3B93007784" height="280" width="180">
+        <div class="meta lh180">
+            <p>八卦神探</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z7ab92e3462ab11e196ac.html">
+        <img alt="爱·回家" src="http://r3.ykimg.com/050E0000519306C5670C4A1ADD0A6B46" height="280" width="180">
+        <div class="meta lh180">
+            <p>爱·回家</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zd35c44c0568911e4b522.html">
+        <img alt="奔跑吧，玫瑰" src="http://r1.ykimg.com/050E00005489547367379F6ACA0EA9A4" height="280" width="180">
+        <div class="meta lh180">
+            <p>奔跑吧，玫瑰</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z7c9952ac324111e4a080.html">
+        <img alt="700集方言短剧" src="http://r3.ykimg.com/050E0000540E5F2067379F10D50A977D" height="280" width="180">
+        <div class="meta lh180">
+            <p>700集方言短剧</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z95f448fe8a4011e4b432.html">
+        <img alt="猎人公会之非你莫属" src="http://r4.ykimg.com/050E0000549A6FA267379F6BE10DB5D3" height="280" width="180">
+        <div class="meta lh180">
+            <p>猎人公会之非你莫属</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z917b6470715311e4b432.html">
+        <img alt="最萌急诊" src="http://r1.ykimg.com/050E000054756C5C67379F3AE00D28B6" height="280" width="180">
+        <div class="meta lh180">
+            <p>最萌急诊</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z5e078870ce9311e38b3f.html">
+        <img alt="微笑江湖" src="http://r4.ykimg.com/050E0000535DE9DF67379F051B09B462" height="280" width="180">
+        <div class="meta lh180">
+            <p>微笑江湖</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z335532c627e011e3b8b7.html">
+        <img alt="鹿鼎记" src="http://r1.ykimg.com/050E0000548932C367379F6E67046D1D" height="280" width="180">
+        <div class="meta lh180">
+            <p>鹿鼎记</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zd71fb3fa34d111e4b522.html">
+        <img alt="基本演绎法 第三季" src="http://r4.ykimg.com/050E00005452E23967379F19A908A85E" height="280" width="180">
+        <div class="meta lh180">
+            <p>基本演绎法 第三季</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zefad7e10525611e3a705.html">
+        <img alt="世间情" src="http://r4.ykimg.com/050E0000528EB11B6758390C7D00BFBD" height="280" width="180">
+        <div class="meta lh180">
+            <p>世间情</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z0375f6ec568a11e4a080.html">
+        <img alt="匹诺曹" src="http://r2.ykimg.com/050E00005462D24667379F66D0024B2E" height="280" width="180">
+        <div class="meta lh180">
+            <p>匹诺曹</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_z8b2fc7f05d9e11e4b432.html">
+        <img alt="宦海奇官" src="http://r4.ykimg.com/050E000054A0BF1467379F6D58058FB6" height="280" width="180">
+        <div class="meta lh180">
+            <p>宦海奇官</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zcbff7998962411de83b1.html">
+        <img alt="罪证" src="http://r3.ykimg.com/050E000052D8BEDA6758391A7E0D4996" height="280" width="180">
+        <div class="meta lh180">
+            <p>罪证</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zc43c669c5e6c11e4b2ad.html">
+        <img alt="家族的秘密" src="http://r1.ykimg.com/050E0000544F498067379F660E0C6627" height="280" width="180">
+        <div class="meta lh180">
+            <p>家族的秘密</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div><div class="movieinfo">
+    <a href="http://www.id97.com/videos/show_page/id/yk_zda1f0e5c0d6211e4a705.html">
+        <img alt="美国恐怖故事 第四季" src="http://r3.ykimg.com/050E00005400306B67379F110D08D3D8" height="280" width="180">
+        <div class="meta lh180">
+            <p>美国恐怖故事 第四季</p>
+            <em>推荐度：5</em>
+        </div>
+    </a>
+</div></div>
+
+
+</div>
+
+<div style="margin-top: 30px">
+    <ul class="list-group"  >
+        <div  style="padding: 10px 10px;margin-bottom: 10px"
+              ng-repeat="v in results" >
+
+            <div >
+                <a ng-href="http://t.dianping.com/deal/{{deal.dealgroupId}}" >
+                <img  class="col-md-4" ng-src="{{v.picUrl}}" alt="..." style=" height: 200px">
+                </a>
+                <div class="col-md-6 ">
+                    <ul class="list-group">
+                        <div class="list-group-item list-group-item-success" style="font-weight: bold">
+                            <span  ng-bind="v.title"></span>
+                        </div>
+
+                        <div class="list-group-item list-group-item-info">
+                            <span  class="col-md-2">类别:</span>
+                            <span  ng-bind="v.basicType"></span>
+                        </div>
+                        <div class="list-group-item list-group-item-info">
+                            <span  class="col-md-3">上传时间:</span>
+                            <span  ng-bind="v.published"></span>
+                        </div>
+                        <div class="list-group-item list-group-item-info">
+                            <span  class="col-md-3">播放次数:</span>
+                            <span  ng-bind="v.view_count"></span>
+                        </div>
+                        <div class="list-group-item list-group-item-info">
+                            <span  class="col-md-3">标签:</span>
+                            <span  ng-bind="v.tags"></span>
+                        </div>
+                    </ul>
+                 </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-info"style="height: 207px" ng-click="see(v)">查看</button>
+                </div>
+            </div>
+        </div>
+    </ul>
+
+</div>
