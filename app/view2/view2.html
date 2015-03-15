@@ -40,15 +40,38 @@
                 </ul>
             </div>
             <div class="col-md-1">
-                <button type="button" class="btn btn-success"style="height: 207px" ng-click="see(v)">观看视频</button>
-
+                <div>
+                <button type="button" class="btn btn-primary"style="height: 90px" ng-click="see(v)">观看视频</button>
+                </div>
+                <div style="margin-top: 10px">
+                    <button type="button" class="btn btn-success"style="height: 90px" ng-click="showRec(v)">推荐列表</button>
+                </div>
             </div>
         </div>
 
     </div>
+
+
+    <div class="panel panel-body" ng-show="showRecommend">
+        <h4>推荐视频：</h4>
+        <span class="col-md-3" ng-repeat="video in recommends">
+            <a href="#">
+            <div>
+                <img ng-src="{{video.picUrl}}" style=" height: 112px">
+            </div>
+            <div>
+                <span >
+                     {{video.title}}
+                </span>
+            </div>
+            </a>
+        </span>
+    </div>
+
     <div style="margin: 20px">
         {{video.description}}
     </div>
+
     <div  style="margin-left: 20px">
         <span ng-repeat="tag in tags" >
             <div class="btn-group" style="margin: 2px">
@@ -73,14 +96,15 @@
                 添加评论
             </button>
         </span>
-
     </div>
 
-<div style="margin-top: 20px">
-    <embed src="http://player.youku.com/player.php/sid/XODY0MDk2MTU2/v.swf"
-           allowFullScreen="true" quality="high" width="960" height="600"
-           align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-</div>
+<div></div>
+
+<!--<div style="margin-top: 20px">-->
+    <!--<embed src="http://player.youku.com/player.php/sid/XODY0MDk2MTU2/v.swf"-->
+           <!--allowFullScreen="true" quality="high" width="960" height="600"-->
+           <!--align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>-->
+<!--</div>-->
 
 
 </div>
