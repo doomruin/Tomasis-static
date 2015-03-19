@@ -24,6 +24,14 @@ angular.module('myApp.view1', ['ngRoute'])
 
         };
 
+        $http.get('json/indexRecommendation.json').success(function(recommends) {
+            $scope.recommends = recommends;
+        });
+
+        $http.get('json/recommendation.json').success(function(recommends) {
+            $scope.recommends1 = recommends;
+        });
+
 //        $(function() {
 //            $('#dg-container').gallery();
 //        });
