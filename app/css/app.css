@@ -32,6 +32,45 @@
 
 
 
+.chart {
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+    margin:60px auto;
+    position:relative;
+}
+
+.y {
+    font-weight:bold;
+    border-bottom:1px solid #71CBD0;
+    position:absolute;
+    text-align:center;
+    padding: 10px;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    bottom:0;
+    color: #D07371;
+}
+.x {
+    font-weight:bold;
+    border-top:1px solid #71CBD0;
+    position:absolute;
+    width: 100%;
+    text-align:center;
+    padding: 10px;
+    top:100%;
+    color:#D07371;
+}
+
+
+.bar {
+    background: rgba(0, 0, 240, 0.4);
+    position: absolute;
+    bottom: 0;
+}
+.bar:nth-of-type(even) {
+    background: rgba(200, 0, 240, 0.4);
+}
+
 
 
 
@@ -65,23 +104,6 @@
     z-index:3;
 }
 
-/** P containing the rate informations **/
-p.jRatingInfos {
-    position:		absolute;
-    z-index:9999;
-    background:	transparent url('icons/bg_jRatingInfos.png') no-repeat;
-    color:			#FFF;
-    display:		none;
-    width:			91px;
-    height:			29px;
-    font-size:16px;
-    text-align:center;
-    padding-top:5px;
-}
-p.jRatingInfos span.maxRate {
-    color:#c9c9c9;
-    font-size:14px;
-}
 
 
 
