@@ -1,9 +1,76 @@
-<!-- 数据图代码 -->
-<!--bar chart-->
-<div class="chart" style="width:{{width}}px; height:{{height}}px;">
-    <!-- Labels -->
-    <div class="y" style="width:{{height}}px;">{{yAxis}}</div>
-    <div class="x">{{xAxis}}</div>
-    <!-- Data -->
-    <div ng-repeat="bar in data" class="bar" style="height:{{bar.value / max * height}}px; width:{{width / data.length - 5}}px; left:{{$index / data.length * width}}px;"></div>
+
+<style type="text/css">
+
+    [ac-chart] {
+        float:left;
+        width: 48%;
+        height: 400px;
+        margin: 0 1%;
+    }
+</style>
+
+<div class="panel panel-info" style="margin-top: 20px">
+    <div class="panel-heading">
+        <h4>当前服务器资源使用情况</h4>
+    </div>
+
+    <div class="panel-body"></div>
+    <div class="list-group">
+        <div class="list-group-item">
+            <li >
+                CPU占用：
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 65%">
+                        <span class="sr-only">35% Complete (success)</span>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="list-group-item">
+            <li>
+                内存占用：
+            </li>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 34%">
+                        <span class="sr-only">35% Complete (success)</span>
+                    </div>
+
+            </div>
+
+        </div>
+
+        <div class="list-group-item">
+            <li>
+                线程池占用：
+            </li>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 80%">
+                    <span class="sr-only">35% Complete (success)</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<div style="margin-bottom: 10px">
+    <legend>15天内计算模块用时(横轴发生时间，纵轴占用时间)</legend>
+    <div id="chart_crawltime" ac-chart="chartType1" ac-data="data3" ac-config="config3"></div>
+    <div id="chart_similartime" ac-chart="chartType1" ac-data="data4" ac-config="config4"></div>
+
+</div>
+
+<div>
+    <legend>15天内算法指标</legend>
+<div id="chart_precision" ac-chart="chartType" ac-data="data1" ac-config="config1"></div>
+<div id="chart_recall" ac-chart="chartType" ac-data="data2" ac-config="config2"></div>
+
 </div>

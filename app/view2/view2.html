@@ -73,7 +73,9 @@
     </div>
 
     <div  style="margin-left: 20px">
+        <button type="button" class="btn btn-success">范爷威武</button>
         <span ng-repeat="tag in tags" >
+
             <div class="btn-group" style="margin: 2px">
                 <button type="button" class="btn btn-info">{{tag.content}}</button>
                 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -89,7 +91,7 @@
         </span>
     </div>
     <div class="input-group">
-        <input placeholder="写下你想说的话" type="text" class="form-control x-kw" ng-model="keyword">
+        <input placeholder="写下你想说的话" type="text" class="form-control x-kw" >
         <span class="input-group-btn">
             <button class="btn btn-primary" type="submit" ng-click="search(keyword)">
                 <span class="glyphicon glyphicon-search"></span>
@@ -100,12 +102,77 @@
 
 <div></div>
 
-<div style="margin-top: 20px">
-    <embed src="http://player.youku.com/player.php/sid/XODY0MDk2MTU2/v.swf"
-           allowFullScreen="true" quality="high" width="960" height="600"
-           align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-</div>
+<!--<div style="margin-top: 20px">-->
+    <!--<embed src="http://player.youku.com/player.php/sid/XODY0MDk2MTU2/v.swf"-->
+           <!--allowFullScreen="true" quality="high" width="960" height="600"-->
+           <!--align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>-->
+<!--</div>-->
 
 
 </div>
 
+<button class="btn btn-primary btn-lg" data-toggle="modal"
+        data-target="#myModal">
+    添加停用词
+</button>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    添加停用词
+                </h4>
+            </div>
+            <div class="modal-body">
+                系统已有停用词：<br/>
+                <span class="label label-default">刘晓波</span>
+                <span class="label label-default">和平奖</span>
+                <span class="label label-default">回民吃猪肉</span>
+                <span class="label label-default">习近平</span>
+                <span class="label label-default">TMD</span>
+                <span class="label label-default">毛民进党</span>
+                <span class="label label-default">机吧</span>
+                <span class="label label-default">联国</span>
+                <span class="label label-default">1989六四</span>
+                <span class="label label-default">性爱</span>
+                <span class="label label-default">李洪志</span>
+                <span class="label label-default">公安</span>
+                <span class="label label-default">梁光烈</span>
+                <span class="label label-default">巴黎市长</span>
+                <span class="label label-default">奥观海</span>
+                <span class="label label-default">撕胯</span>
+
+                <div class="input-group" style="margin-top: 15px">
+                    <input placeholder="停用词...？" type="text" class="form-control x-kw" >
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit" ng-click="search(keyword)">
+
+                            添加
+                        </button>
+                    </span>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+
+                <button type="button" class="btn btn-primary">
+                    提交更改
+                </button>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <strong>修改成功!</strong> 请刷新页面查看效果
+                    </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>

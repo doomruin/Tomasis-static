@@ -1,0 +1,48 @@
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h4>待处理词语：</h4>
+    </div>
+
+    <div class="panel-body">
+        <span class="label label-default">房子     </span>
+        <span class="label label-default">互联网   </span>
+        <span class="label label-default">有关部门 </span>
+        <span class="label label-default">秘书     </span>
+        <span class="label label-default">防火墙   </span>
+        <span class="label label-default">亚克西   </span>
+        <span class="label label-default">房地产   </span>
+        <span class="label label-default">河蟹     </span>
+        <span class="label label-default">叫兽     </span>
+        <span class="label label-default">小强     </span>
+    </div>
+</div>
+
+<div class="input-group ">
+    <input placeholder="你想要改什么？" type="text" class="form-control x-kw"  ng-model="keyword">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit" ng-click="search()">
+                <span class="glyphicon glyphicon-search"></span>
+                词语搜索
+            </button>
+        </span>
+
+
+</div>
+
+        <div class="col-md-8" ng-show="showLine">
+            <li><h4>您要查找的“{{keyword}}”在第869行</h4></li>
+        </div>
+        <div style="float: right;margin-top: 5px">
+            <button class="btn btn-danger"  type="submit" ng-click="search()">
+                <span class="glyphicon glyphicon-ok"></span>
+                保存修改
+            </button>
+        </div>
+
+
+<div class="alert alert-success alert-dismissible" role="alert" style="margin-top: 50px">
+    <strong>修改成功!</strong>
+</div>
+
+
+ <textarea style="width: 100%;height: 500px; background-color: #e5e5e5" ng-model="content"></textarea>
